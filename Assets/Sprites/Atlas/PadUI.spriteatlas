@@ -43,13 +43,12 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 132fc32a8c8480c48bdce9405ac39a48, type: 3}
-    totalSpriteSurfaceArea: 9375027
+    totalSpriteSurfaceArea: 9318963
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 56682f008b084f446aec310e99869c6c, type: 3}
   - {fileID: 21300000, guid: 6bfb2c108e3e74641b2e056d0ace1510, type: 3}
-  - {fileID: 21300000, guid: 74762d20bb522e242a5bed32ff37eb1b, type: 3}
   - {fileID: 21300000, guid: 92f12f40f8ab5e04e8048a9a9c28a7c6, type: 3}
   - {fileID: 21300000, guid: 3eee13f0d6e20d7428ae7bc17cd221d9, type: 3}
   - {fileID: 21300000, guid: a405e91169952f840ad065781efcbb7e, type: 3}
@@ -128,7 +127,6 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - icon_zhuangshi
   - icon_kuanshi
-  - logo
   - home_2
   - icon_GroupingMode
   - icon_set

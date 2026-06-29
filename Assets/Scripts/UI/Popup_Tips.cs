@@ -55,7 +55,7 @@ namespace Fxb.CMSVR
 
         public void UpdateMsg(string msg)
         {
-            text.text = msg;
+            text.text = "Incorrect tool selection; please select again!";
             popup.Hide(1.0f);
         }
     }

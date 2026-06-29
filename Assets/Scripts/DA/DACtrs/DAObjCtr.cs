@@ -126,7 +126,7 @@ namespace Fxb.CMSVR
                 var depandObj = World.Get<DAObjCtr>(depandId);
 
                 DebugEx.AssertNotNull(depandObj,
-                  $"id:{depandId} 未找到");
+                  $"id:{depandId} not found");
 
                 //DebugEx.AssertNotNull(depandObj,
                 //    $"id:{depandId} 未找到  gameobj:{World.Get<DACsvConfig>().FindRowDatas(depandId).ModelName}");
@@ -139,7 +139,7 @@ namespace Fxb.CMSVR
         {
             configData = World.Get<DACsvConfig>().FindRDByModelName(name);
 
-            Debug.Assert(configData != null, $"dacsvconfig搜索失败. {name}");
+            Debug.Assert(configData != null, $"dacsvconfig search failed. {name}");
 
             idfromConfig = configData.Id;
 
@@ -151,7 +151,7 @@ namespace Fxb.CMSVR
             //网格尺寸暂时写死2厘米
             Debug.Assert(dropGridPlane == null || dropGridPlane.gridSize == 0.02f);
 
-            Debug.Assert(dropGridPlane == null || dropGridPlane.transform == transform || dropGridPlane.transform.parent == transform, "嵌套的plane不方便克隆");
+            Debug.Assert(dropGridPlane == null || dropGridPlane.transform == transform || dropGridPlane.transform.parent == transform, "Nested planes are inconvenient to clone.");
 
             World.current.Injecter.Regist(this, ID);
 
@@ -189,7 +189,7 @@ namespace Fxb.CMSVR
 
             if (interactObj != null && interactObj.isGrabbable)
             {
-                Debug.LogError("拆装物体默认不能允许被抓取");
+                Debug.LogError("Objects being assembled or disassembled are not grabbable by default.");
 
                 interactObj.isGrabbable = false;
             }
@@ -312,7 +312,7 @@ namespace Fxb.CMSVR
 
         protected virtual bool CheckProcessCondition(DAProcessTarget processTarget)
         {
-            var GUID_ERROR_MSG = "实训模式下请按照指引进行操作！";
+            var GUID_ERROR_MSG = "Please follow the guidelines when operating in the practical training mode!";
 
             if (World.Get<DASceneState>().isGuiding)
             {
@@ -764,7 +764,7 @@ namespace Fxb.CMSVR
 
             var cloneObjCtr = Instantiate(Resources.Load<GameObject>(prefabPath)).GetComponent<DACloneObjCtr>();
 
-            Debug.Assert(cloneObjCtr != null, $"克隆物体身上需要挂载{typeof(DACloneObjCtr)}脚本");
+            Debug.Assert(cloneObjCtr != null, $"The cloned object needs to have the component attached.{typeof(DACloneObjCtr)} script");
 
             cloneObjCtr.transform.position = transform.position;
 
